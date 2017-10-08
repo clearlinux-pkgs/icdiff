@@ -4,14 +4,13 @@
 #
 Name     : icdiff
 Version  : 1.9.1
-Release  : 1
+Release  : 2
 URL      : https://github.com/jeffkaufman/icdiff/archive/release-1.9.1.tar.gz
 Source0  : https://github.com/jeffkaufman/icdiff/archive/release-1.9.1.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Python-2.0
 Requires: icdiff-bin
-Requires: icdiff-legacypython
 Requires: icdiff-python3
 Requires: icdiff-python
 BuildRequires : pbr
@@ -33,19 +32,9 @@ Group: Binaries
 bin components for the icdiff package.
 
 
-%package legacypython
-Summary: legacypython components for the icdiff package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the icdiff package.
-
-
 %package python
 Summary: python components for the icdiff package.
 Group: Default
-Requires: icdiff-legacypython
 Requires: icdiff-python3
 
 %description python
@@ -69,15 +58,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1507476403
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1507476478
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1507476403
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -89,10 +75,6 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 /usr/bin/git-icdiff
 /usr/bin/icdiff
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
