@@ -4,7 +4,7 @@
 #
 Name     : icdiff
 Version  : 1.9.1
-Release  : 10
+Release  : 11
 URL      : https://github.com/jeffkaufman/icdiff/archive/release-1.9.1.tar.gz
 Source0  : https://github.com/jeffkaufman/icdiff/archive/release-1.9.1.tar.gz
 Summary  : No detailed summary available
