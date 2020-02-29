@@ -4,7 +4,7 @@
 #
 Name     : icdiff
 Version  : 1.9.5
-Release  : 21
+Release  : 22
 URL      : https://github.com/jeffkaufman/icdiff/archive/release-1.9.5/icdiff-1.9.5.tar.gz
 Source0  : https://github.com/jeffkaufman/icdiff/archive/release-1.9.5/icdiff-1.9.5.tar.gz
 Summary  : Improved colored diff
@@ -59,13 +59,14 @@ python3 components for the icdiff package.
 
 %prep
 %setup -q -n icdiff-release-1.9.5
+cd %{_builddir}/icdiff-release-1.9.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570126019
+export SOURCE_DATE_EPOCH=1582936986
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
@@ -79,7 +80,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/icdiff
-cp LICENSE %{buildroot}/usr/share/package-licenses/icdiff/LICENSE
+cp %{_builddir}/icdiff-release-1.9.5/LICENSE %{buildroot}/usr/share/package-licenses/icdiff/ee7904173585b2506078dc8dac150638f1b3e537
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -95,7 +96,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/icdiff/LICENSE
+/usr/share/package-licenses/icdiff/ee7904173585b2506078dc8dac150638f1b3e537
 
 %files python
 %defattr(-,root,root,-)
