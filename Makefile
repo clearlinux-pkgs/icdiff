@@ -1,5 +1,5 @@
 PKG_NAME := icdiff
-URL = https://github.com/jeffkaufman/icdiff/archive/release-1.9.5/icdiff-1.9.5.tar.gz
+URL = https://github.com/jeffkaufman/icdiff/archive/release-2.0.0/icdiff-2.0.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
