@@ -4,7 +4,7 @@
 #
 Name     : icdiff
 Version  : 2.0.4
-Release  : 37
+Release  : 38
 URL      : https://github.com/jeffkaufman/icdiff/archive/release-2.0.4/icdiff-2.0.4.tar.gz
 Source0  : https://github.com/jeffkaufman/icdiff/archive/release-2.0.4/icdiff-2.0.4.tar.gz
 Summary  : improved colored diff
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628089950
+export SOURCE_DATE_EPOCH=1635740866
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
