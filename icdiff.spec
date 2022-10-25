@@ -4,7 +4,7 @@
 #
 Name     : icdiff
 Version  : 2.0.5
-Release  : 40
+Release  : 41
 URL      : https://github.com/jeffkaufman/icdiff/archive/release-2.0.5/icdiff-2.0.5.tar.gz
 Source0  : https://github.com/jeffkaufman/icdiff/archive/release-2.0.5/icdiff-2.0.5.tar.gz
 Summary  : improved colored diff
