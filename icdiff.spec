@@ -7,7 +7,7 @@
 #
 Name     : icdiff
 Version  : 2.0.7
-Release  : 46
+Release  : 47
 URL      : https://github.com/jeffkaufman/icdiff/archive/release-2.0.7/icdiff-2.0.7.tar.gz
 Source0  : https://github.com/jeffkaufman/icdiff/archive/release-2.0.7/icdiff-2.0.7.tar.gz
 Summary  : improved colored diff
